@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.shou.ellipetest.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.shou.ellipetest.CustomEllipsizeTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="Hello World 社 50件"
+            app:leaveText="@{viewModel.leaveText}"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</layout>
